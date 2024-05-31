@@ -27,19 +27,19 @@ const questions = [
         "answer": "D"
     },
     {
-        "que": "What is formula of (a+b)**2?",
-        "A": "a^2+2ab+b^2",
-        "B": "a^2+b^2",
-        "C": "a^3+b^3",
-        "D": "a^2+b^3",
+        "que": "What is full form of HTML?",
+        "A": "HyperText markup language",
+        "B": "Hyper language",
+        "C": "text programming language",
+        "D": "None of the Above",
         "answer": "A"
     },
     {
-        "que": " How do you write 'Hello World' in an alert box?",
-        "A": "msgBox('Hello World');",
-        "B": "alertBox('Hello World');",
-        "C": "msg('Hello World');",
-        "D": "alert('Hello World');",
+        "que": "What is full form of CSS?",
+        "A": "Scripting language",
+        "B": "Style sheet",
+        "C": "Style markup language",
+        "D": "Cascading style sheet",
         "answer": "D"
     }
 ]
@@ -50,7 +50,7 @@ const quiz_title = document.getElementById('quiz-title');
 quiz_title.innerText = quizTitle;
 
 // Countdown timer Logic
-let seconds = 100;
+let seconds = 120;
 const time = document.getElementById('time');
 setInterval(updateCountdown, 1000);
 
