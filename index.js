@@ -2,6 +2,7 @@
 var username = "";
 const enterNm = document.getElementById('enter');
 enterNm.addEventListener('click', (e) => {
+    document.getElementById('user-name').style.border = "2px solid green";
     const user_name = document.getElementById('user-name').value;
     username = user_name;
     console.log(username);

@@ -5,6 +5,7 @@ const percentage = document.getElementById('percentage');
 
 
 // Accesssing user name from Local Storage
+
 name_of_stud.innerHTML = localStorage.getItem('UserName');
 correct_que.innerHTML = localStorage.getItem('score');
 let wr = 5-score;
