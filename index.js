@@ -18,7 +18,7 @@ const profit_and_loss = document.getElementById('profit_and_loss');
 pipes_and_cisterns.addEventListener('click', (event) => {
     // localStorage.removeItem('UserName');
     // localStorage.removeItem('QuizTitle');
-    var title = "Pipes and Cisterns";
+    var title = "General quiz 1";
     // Storing user name in local storage for displaying it in last 
     localStorage.setItem('UserName', username);
     localStorage.setItem('QuizTitle', title);
@@ -28,7 +28,7 @@ pipes_and_cisterns.addEventListener('click', (event) => {
 probability.addEventListener('click', (event) => {
     // localStorage.removeItem('UserName');
     // localStorage.removeItem('QuizTitle');
-    let title = "Probability";
+    let title = "General quiz 2";
     // Storing user name in local storage for displaying it in last 
     localStorage.setItem('UserName', username);
     localStorage.setItem('QuizTitle', title);
@@ -38,7 +38,7 @@ probability.addEventListener('click', (event) => {
 problem_on_ages.addEventListener('click', (event) => {
     // localStorage.removeItem('UserName');
     // localStorage.removeItem('QuizTitle');
-    let title = "Problem on Ages";
+    let title = "General quiz 3";
     // Storing user name in local storage for displaying it in last 
     localStorage.setItem('UserName', username);
     localStorage.setItem('QuizTitle', title);
@@ -48,7 +48,7 @@ problem_on_ages.addEventListener('click', (event) => {
 profit_and_loss.addEventListener('click', (event) => {
     // localStorage.removeItem('UserName');
     // localStorage.removeItem('QuizTitle');
-    let title = "Profit and Loss";
+    let title = "General quiz 4";
     // Storing user name in local storage for displaying it in last 
     localStorage.setItem('UserName', username);
     localStorage.setItem('QuizTitle', title);
