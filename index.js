@@ -8,7 +8,6 @@ enterNm.addEventListener('click', (e) => {
 });
 
 
-
 const pipes_and_cisterns = document.getElementById('pipes_and_cisterns')
 const probability = document.getElementById('probability');
 const problem_on_ages = document.getElementById('problem_on_ages');
