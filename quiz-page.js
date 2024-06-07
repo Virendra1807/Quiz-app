@@ -5,7 +5,7 @@
 // }
 // resetVal();
 
-// =========== Questions changing Logic =======
+// =========== Questions =======
 const questions = [
     {
         "que": "Inside which HTML attribute do we put the link?",
@@ -46,6 +46,46 @@ const questions = [
         "C": "Style markup language",
         "D": "Cascading style sheet",
         "answer": "D"
+    },
+    {
+        "que": "Which HTML tag is used to define an unordered list?",
+        "A": "<ol>",
+        "B": "<ul>",
+        "C": "<li>",
+        "D": "<list>",
+        "answer": "B"
+    },
+    {
+        "que": "What is the correct HTML element for inserting a line break?",
+        "A": "<break>",
+        "B": "<br>",
+        "C": "<lb>",
+        "D": "<newline>",
+        "answer": "B"
+    },
+    {
+        "que": "How do you create a function in JavaScript?",
+        "A": "function myFunction()",
+        "B": "function:myFunction()",
+        "C": "function = myFunction()",
+        "D": "function.myFunction()",
+        "answer": "A"
+    },
+    {
+        "que": "Which HTML attribute is used to define inline styles?",
+        "A": "style",
+        "B": "class",
+        "C": "id",
+        "D": "styles",
+        "answer": "A"
+    },
+    {
+        "que": "Which HTML element is used to specify a footer for a document or section?",
+        "A": "<foot>",
+        "B": "<bottom>",
+        "C": "<footer>",
+        "D": "<section>",
+        "answer": "C"
     }
 ]
 
@@ -66,9 +106,8 @@ function updateCountdown() {
 
     if (seconds === 0) {
         // Handle when the time is up
-        let totalTime = 120 - Number(seconds);
+        let totalTime = Number(120) - Number(seconds);
         localStorage.setItem('timeTaken', totalTime);
-
         clearInterval(updateCountdown);
 
         // You can add your logic here, like submitting the quiz or showing a message.
@@ -79,11 +118,13 @@ function updateCountdown() {
 // Score count Logic
 const score = document.getElementById('score');
 var marks = 0;
-score.innerHTML = marks;
+score.innerText = marks;
 
 function totalScore() {
     marks++;
-    score.innerHTML = marks;
+    score.innerText = marks;
+    localStorage.setItem('score', marks);
+    console.log(marks);
 }
 
 // Question number Count Logic
@@ -96,10 +137,10 @@ function nextQue() {
     queNumber++;
     question_number.innerHTML = queNumber;
 
-    if (index === 5) {
+    if (index === 10) {
         document.getElementById('next-question').innerHTML = `<a href='result.html'> Submit </a>`;
-        localStorage.setItem('score', marks);
-        // window.location.href = './result.html';
+        let totalTime = Number(120) - Number(seconds);
+        localStorage.setItem('timeTaken', totalTime);
     }
 }
 
@@ -114,11 +155,11 @@ const loadQues = () => {
     const data = questions[index];
 
     // Display question and options
-    question.innerHTML = data.que;
-    opt_a.innerHTML = data.A;
-    opt_b.innerHTML = data.B;
-    opt_c.innerHTML = data.C;
-    opt_d.innerHTML = data.D;
+    question.innerText = data.que;
+    opt_a.innerText = data.A;
+    opt_b.innerText = data.B;
+    opt_c.innerText = data.C;
+    opt_d.innerText = data.D;
 
     opt_a.style.backgroundColor = "";
     opt_b.style.backgroundColor = "";
