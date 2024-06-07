@@ -1,9 +1,9 @@
-// // Reset Score of user
-// async function resetVal(){
-//     await localStorage.setItem('Score', 0);
-//     console.log('Reseting a Score of Student');
-// }
-// resetVal();
+// Reset Score of user
+async function resetVal(){
+    await localStorage.setItem('score', 0);
+    console.log('Reseting a Score of Student');
+}
+resetVal();
 
 // =========== Questions =======
 const questions = [
@@ -118,12 +118,11 @@ function updateCountdown() {
 // Score count Logic
 const score = document.getElementById('score');
 var marks = 0;
-score.innerText = marks;
 
 function totalScore() {
     marks++;
     score.innerText = marks;
-    localStorage.setItem('score', marks);
+    // localStorage.setItem('score', marks);
     console.log(marks);
 }
 
@@ -142,6 +141,9 @@ function nextQue() {
         let totalTime = Number(120) - Number(seconds);
         localStorage.setItem('timeTaken', totalTime);
     }
+
+    // score.innerText = marks;
+    localStorage.setItem('score', marks);
 }
 
 let index = 0;
