@@ -1,9 +1,9 @@
-// Reset Score of user
-async function resetVal(){
-    await localStorage.setItem('Score', 0);
-    console.log('Reseting a Score of Student');
-}
-resetVal();
+// // Reset Score of user
+// async function resetVal(){
+//     await localStorage.setItem('Score', 0);
+//     console.log('Reseting a Score of Student');
+// }
+// resetVal();
 
 // =========== Questions changing Logic =======
 const questions = [
@@ -66,7 +66,11 @@ function updateCountdown() {
 
     if (seconds === 0) {
         // Handle when the time is up
+        let totalTime = 120 - Number(seconds);
+        localStorage.setItem('timeTaken', totalTime);
+
         clearInterval(updateCountdown);
+
         // You can add your logic here, like submitting the quiz or showing a message.
         window.location.href = './result.html';
     }
@@ -94,7 +98,7 @@ function nextQue() {
 
     if (index === 5) {
         document.getElementById('next-question').innerHTML = `<a href='result.html'> Submit </a>`;
-        localStorage.setItem('Score', marks);
+        localStorage.setItem('score', marks);
         // window.location.href = './result.html';
     }
 }
@@ -108,7 +112,7 @@ const opt_d = document.getElementById('option-d');
 
 const loadQues = () => {
     const data = questions[index];
-    // score.innerHTML = marks; 
+
     // Display question and options
     question.innerHTML = data.que;
     opt_a.innerHTML = data.A;
@@ -120,7 +124,7 @@ const loadQues = () => {
     opt_b.style.backgroundColor = "";
     opt_c.style.backgroundColor = "";
     opt_d.style.backgroundColor = "";
-    
+
     // Reset marks for each question
     let ans = "";
 
