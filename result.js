@@ -7,12 +7,13 @@ const percentage = document.getElementById('percentage');
 // Accesssing user name from Local Storage
 
 name_of_stud.innerHTML = localStorage.getItem('UserName');
-correct_que.innerHTML = localStorage.getItem('score');
-let wr = 5-score;
-wrong_que.innerHTML = wr;
-console.log(wr); 
+correct_que.innerHTML = localStorage.getItem('Score');
 
-let per = localStorage.getItem('score'); 
-per += ".00%";
-percentage.innerHTML = per;
-console.log(per);
+let ttlScore = localStorage.getItem('Score');
+// wrong_que.innerHTML = wr;
+console.log('Total Score is : ' + ttlScore); 
+
+// let per = localStorage.getItem('score'); 
+// per += ".00%";
+// percentage.innerHTML = per;
+// console.log(per);

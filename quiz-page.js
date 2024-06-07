@@ -1,6 +1,11 @@
+// Reset Score of user
+async function resetVal(){
+    await localStorage.setItem('Score', 0);
+    console.log('Reseting a Score of Student');
+}
+resetVal();
 
 // =========== Questions changing Logic =======
-
 const questions = [
     {
         "que": "Inside which HTML attribute do we put the link?",
@@ -45,8 +50,8 @@ const questions = [
 ]
 
 // ======= Giving title to Quiz from Index.html ===============
-const quizTitle = localStorage.getItem('QuizTitle');
 const quiz_title = document.getElementById('quiz-title');
+const quizTitle = localStorage.getItem('QuizTitle');
 quiz_title.innerText = quizTitle;
 
 // Countdown timer Logic
@@ -63,12 +68,13 @@ function updateCountdown() {
         // Handle when the time is up
         clearInterval(updateCountdown);
         // You can add your logic here, like submitting the quiz or showing a message.
+        window.location.href = './result.html';
     }
 }
 
 // Score count Logic
 const score = document.getElementById('score');
-let marks = 0;
+var marks = 0;
 score.innerHTML = marks;
 
 function totalScore() {
@@ -88,7 +94,7 @@ function nextQue() {
 
     if (index === 5) {
         document.getElementById('next-question').innerHTML = `<a href='result.html'> Submit </a>`;
-        localStorage.setItem('score', marks);
+        localStorage.setItem('Score', marks);
         // window.location.href = './result.html';
     }
 }
@@ -102,7 +108,7 @@ const opt_d = document.getElementById('option-d');
 
 const loadQues = () => {
     const data = questions[index];
-
+    // score.innerHTML = marks; 
     // Display question and options
     question.innerHTML = data.que;
     opt_a.innerHTML = data.A;
