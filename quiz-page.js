@@ -95,7 +95,7 @@ const quizTitle = localStorage.getItem('QuizTitle');
 quiz_title.innerText = quizTitle;
 
 // Countdown timer Logic
-let seconds = 120;
+let seconds = 100;
 const time = document.getElementById('time');
 setInterval(updateCountdown, 1000);
 
@@ -106,7 +106,7 @@ function updateCountdown() {
 
     if (seconds === 0) {
         // Handle when the time is up
-        let totalTime = Number(120) - Number(seconds);
+        let totalTime = Number(100) - Number(seconds);
         localStorage.setItem('timeTaken', totalTime);
         clearInterval(updateCountdown);
 
