@@ -111,7 +111,7 @@ html{
     align-items: center;
     position: absolute;
     left: 48%;
-    top: 230px;
+    top: 15rem;
     border-radius: 50%;
     color: var(--defaultColor);
     border: 2px solid var(--defaultColor);
